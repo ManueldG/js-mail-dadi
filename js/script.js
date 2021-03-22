@@ -12,27 +12,29 @@ javascript non fa nulla da solo, dobbiamo dirgli noi cosa vogliamo fare
 si ma noi cosa vogliamo fare?
 torniamo a scrivere in italiano
 proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
-
-
 */
+
+
 var p1=0,p2=0,risposta="si";
 var email='';
 var users = ["gianni@gmail.com","andrea@gmail.com","luca@gmail.com","fede@gmail.com","sasa@gmail.com"];
-for (0; !((email!='user@dominio.com') &&(email!='') && (email.indexOf('@')!=(-1)));0){
+
+for (0; !((email!='user@dominio.com') &&(email!='') && (email.indexOf('@')!=(-1)));0)
+{
     email = prompt("inserisci email per l'accesso","user@dominio.com");
     console.log(email);
     console.log(email.indexOf('@'));
 }
 
 for (var i=0 ; i<users.length-1 ; i++)
-    {
+{
     if (users[i]===email)
-        {
+    {
         console.log("Benvenuto",users[i]);
         console.log(" vuoi giocare a dadi? ");
         document.getElementById("titolo").innerHTML=("Benvenuto "+users[i]+" vuoi giocare a dadi? ");
         for (0; risposta=="si";0)
-            {
+        {
                 risposta=prompt("vuoi giocare","si");
                 p1=(Math.random()*5+1).toFixed(0);
                 p2=(Math.random()*5+1).toFixed(0);
@@ -44,39 +46,34 @@ for (var i=0 ; i<users.length-1 ; i++)
                 document.getElementById("cpu").innerHTML="il computer lancia un "+p2;
 
                 console.log("il computer lancia un "+p2);
-                if(p1 > p2){
+                if(p1 > p2)
+                {
                     console.log("vince "+users[i]);
                     document.getElementById("testo").innerHTML="vince "+users[i];
-
                 }                    
                 else 
-                    if(p1==p2){
+                    if(p1==p2)
+                    {
                         console.log("pareggio");
                         document.getElementById("testo").innerHTML=" Pareggio";
                     }
                         
-                    else{
+                    else
+                    {
                         console.log("vince il computer");
                         document.getElementById("testo").innerHTML="vince il computer";
                     }
                     
 
-            }
+        }
         console.log("Grazie di aver giocato con noi buona giornata");
         document.getElementById("testo").innerHTML="Grazie di aver giocato con noi buona giornata";
-
         break;
+    }
 
-        }
-        else
-        {console.log("Mi dispiace non sei registrato");}
-        
+    else
+    {
+        console.log("Mi dispiace non sei registrato");
     }
         
-
-/*
-for (var i=0; ;0){
-    email = prompt("inserisci email per l'accesso","user@dominio.com");
-    console.log(email);
-}*/
-
+}
