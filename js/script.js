@@ -29,8 +29,8 @@ for (var i=0 ; i<users.length-1 ; i++)
     if (users[i]===email)
         {
         console.log("Benvenuto",users[i]);
-        console.log("vuoi giocare a dadi?");
-        document.getElementById("titolo").innerHTML=("Benvenuto "+users[i]+"vuoi giocare a dadi?");
+        console.log(" vuoi giocare a dadi? ");
+        document.getElementById("titolo").innerHTML=("Benvenuto "+users[i]+" vuoi giocare a dadi? ");
         for (0; risposta=="si";0)
             {
                 risposta=prompt("vuoi giocare","si");
