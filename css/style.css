@@ -1,0 +1,29 @@
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 55px auto;
+    width: 792px;
+    height: 500px;   
+}
+
+.container h1{
+
+}
+
+.box{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+
+.dice {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

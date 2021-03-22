@@ -30,13 +30,19 @@ for (var i=0 ; i<users.length-1 ; i++)
         {
         console.log("Benvenuto",users[i]);
         console.log("vuoi giocare a dadi?");
+        document.getElementById("titolo").innerHTML=("Benvenuto "+users[i]+"vuoi giocare a dadi?");
         for (0; risposta=="si";0)
             {
                 risposta=prompt("vuoi giocare","si");
-                p1=(Math.random()*6+1).toFixed(0);
-                p2=(Math.random()*6+1).toFixed(0);
+                p1=(Math.random()*5+1).toFixed(0);
+                p2=(Math.random()*5+1).toFixed(0);
                 
                 console.log(users[i]+" lancia un "+p1);
+                document.getElementById("dado").src="img/"+p1+".jpg";
+                document.getElementById("user").innerHTML=users[i]+" lancia un "+p1;
+                document.getElementById("dadocpu").src="img/"+p2+".jpg"
+                document.getElementById("cpu").innerHTML="il computer lancia un "+p2;
+
                 console.log("il computer lancia un "+p2);
                 if(p1 > p2)
                     console.log("vince "+users[i]);
@@ -48,6 +54,8 @@ for (var i=0 ; i<users.length-1 ; i++)
 
             }
         console.log("Grazie di aver giocato con noi buona giornata");
+        document.getElementById("testo").innerHTML="Grazie di aver giocato con noi buona giornata";
+
         break;
 
         }
