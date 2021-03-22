@@ -44,13 +44,22 @@ for (var i=0 ; i<users.length-1 ; i++)
                 document.getElementById("cpu").innerHTML="il computer lancia un "+p2;
 
                 console.log("il computer lancia un "+p2);
-                if(p1 > p2)
+                if(p1 > p2){
                     console.log("vince "+users[i]);
+                    document.getElementById("testo").innerHTML="vince "+users[i];
+
+                }                    
                 else 
-                if(p1==p2)
-                    console.log("pareggio");
-                else
-                    console.log("vince il computer");
+                    if(p1==p2){
+                        console.log("pareggio");
+                        document.getElementById("testo").innerHTML=" Pareggio";
+                    }
+                        
+                    else{
+                        console.log("vince il computer");
+                        document.getElementById("testo").innerHTML="vince il computer";
+                    }
+                    
 
             }
         console.log("Grazie di aver giocato con noi buona giornata");
