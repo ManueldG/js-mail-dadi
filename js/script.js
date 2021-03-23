@@ -16,6 +16,7 @@ proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro program
 
 
 var p1=0,p2=0,risposta="si";
+var msgUscita = "mi dispiace non sei registrato";
 var email='';
 var users = ["gianni@gmail.com","andrea@gmail.com","luca@gmail.com","fede@gmail.com","sasa@gmail.com"];
 
@@ -26,7 +27,7 @@ for (0; !((email!='user@dominio.com') &&(email!='') && (email.indexOf('@')!=(-1)
     console.log(email.indexOf('@'));
 }
 
-for (var i=0 ; i<users.length-1 ; i++)
+for (var i=0 ; i<users.length ; i++)
 {
     if (users[i]===email)
     {
@@ -70,13 +71,16 @@ for (var i=0 ; i<users.length-1 ; i++)
 
         }
         console.log("Grazie di aver giocato con noi buona giornata");
-        document.getElementById("testo").innerHTML="Grazie di aver giocato con noi buona giornata";
+        msgUscita = "Grazie di aver giocato con noi buona giornata";
+        document.getElementById("testo").innerHTML=msgUscita;
         break;
     }
 
     else
     {
-        console.log("Mi dispiace non sei registrato");
-    }
         
+    }
+    
 }
+console.log(msgUscita);
+document.getElementById("testo").innerHTML=msgUscita;   
