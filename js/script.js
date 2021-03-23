@@ -30,9 +30,12 @@ for (var i=0 ; i<users.length-1 ; i++)
 {
     if (users[i]===email)
     {
-        console.log("Benvenuto",users[i]);
+    
+        var user = users[i].slice(0,users[i].indexOf('@'));
+        console.log("Benvenuto",user);
+        console.log(user);
         console.log(" vuoi giocare a dadi? ");
-        document.getElementById("titolo").innerHTML=("Benvenuto "+users[i]+" vuoi giocare a dadi? ");
+        document.getElementById("titolo").innerHTML=("Benvenuto "+user+" vuoi giocare a dadi? ");
         for (0; risposta=="si";0)
         {
                 risposta=prompt("vuoi giocare","si");
@@ -41,15 +44,15 @@ for (var i=0 ; i<users.length-1 ; i++)
                 
                 console.log(users[i]+" lancia un "+p1);
                 document.getElementById("dado").src="img/"+p1+".jpg";
-                document.getElementById("user").innerHTML=users[i]+" lancia un "+p1;
+                document.getElementById("user").innerHTML=user+" lancia un "+p1;
                 document.getElementById("dadocpu").src="img/"+p2+".jpg"
                 document.getElementById("cpu").innerHTML="il computer lancia un "+p2;
 
                 console.log("il computer lancia un "+p2);
                 if(p1 > p2)
                 {
-                    console.log("vince "+users[i]);
-                    document.getElementById("testo").innerHTML="vince "+users[i];
+                    console.log("vince "+user);
+                    document.getElementById("testo").innerHTML="vince "+user;
                 }                    
                 else 
                     if(p1==p2)
